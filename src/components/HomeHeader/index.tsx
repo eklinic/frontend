@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import { Container } from './style'
 import Logo from '../../assets/logotipoEklinic.svg'
@@ -25,7 +26,9 @@ const Home: React.FC = () => {
                         </li>
                     </ul>
                     <div className="btnsContainer">
-                        <button className="btnIr">RESERVE JÁ</button>
+                        <Link href='/clinicas'>
+                            <button className="btnIr">RESERVE JÁ</button>
+                        </Link>
                     </div>
                 </nav>
             </div>

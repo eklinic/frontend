@@ -3,7 +3,7 @@ import axios from "axios"
 export const URL_BASE = 'http://newapi.eklinic.com.br/api/'
 
 export const api = axios.create({
-    baseURL: 'http://newapi.eklinic.com.br/api/'
+    baseURL: 'https://api.eklinic.com.br/api/'
 })
 
 export interface ClinicaAtributteProps {
@@ -55,6 +55,7 @@ export interface ClinicaAtributteProps {
     responsible_whatsapp: string
     start_time: string
     end_time: string
+    id: number
 
 }
 

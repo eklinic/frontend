@@ -18,9 +18,9 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
     function consultoriosQtde(qtde) {
         if (qtde > 0) {
             if (qtde > 1) {
-                return `${qtde} consultórios • `
+                return `${qtde} consultórios`
             } else {
-                return `${qtde} consultório • `
+                return `${qtde} consultório`
             }
         } else {
             return null
@@ -35,7 +35,9 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
 
             <div className="details">
                 <div className="textDescription">
-                    <TextChamada> {`C00${cliniId}`}</TextChamada>
+                    <Link href={`/clinicas/${cliniId}`}>
+                        <TextChamada> {`C00${cliniId}`}</TextChamada>
+                    </Link>
                     <TextAdj> {`${cliniRua} • `}  {`${cliniCidade} • `} {`${consultoriosQtde(cliniQtdeConsult)}`}</TextAdj>
                 </div>
 
@@ -64,8 +66,8 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
                 </div>
 
                 <div className="links">
-                    <Link href='/'>
-                        <a>Confira mais detalhes</a>
+                    <Link href={`/clinicas/${cliniId}`}>
+                        <a>Conferir consultórios </a>
                     </Link>
                 </div>
 

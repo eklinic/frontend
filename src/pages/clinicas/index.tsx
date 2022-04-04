@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { URL_BASE, ClinicaAtributteProps, api } from '../services/services'
+import { URL_BASE, ClinicaAtributteProps, api } from '../../services/services'
 
 
-import { Container, Centralizer } from '../styles/pages/Clinicas'
-import ClinicasHeader from '../components/ClinicasHeader'
-import GoogleMaps from '../components/Maps'
-import BoxClinic from '../components/BoxClinic'
-import Loader from '../components/Loader'
+import { Container, Centralizer } from '../../styles/pages/Clinicas'
+import ClinicasHeader from '../../components/ClinicasHeader'
+import GoogleMaps from '../../components/Maps'
+import BoxClinic from '../../components/BoxClinic'
+import Loader from '../../components/Loader'
 
 
 

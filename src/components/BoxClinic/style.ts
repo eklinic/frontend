@@ -75,6 +75,7 @@ export const Centralizer = styled.div`
 export const TextChamada = styled.h2`
   color: ${props => props.theme.colors.azulEscuro};
   text-align: left;
+  cursor:pointer;
 
 `
 

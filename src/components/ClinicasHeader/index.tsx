@@ -15,6 +15,10 @@ const ClinicasHeader: React.FC = () => {
                             Falar com o atendimento
                             <div className="line" />
                         </li>
+                        <li>
+                            Quero compartilhar minha clínica!
+                            <div className="line" />
+                        </li>
                     </ul>
                     <div className="btnsContainer">
                         <button className="btnIr">VOLTAR AO INICIO</button>

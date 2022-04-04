@@ -29,7 +29,7 @@
         "src/pages/clinicas.tss",
         "src/pages/index.tsx",
         "src/components/BoxCarroussel/index.tsx",
-        "src/components/BoxCarroussel/style.js",
+        "src/components/BoxCarroussel/style.js", "src/pages/clinicas/[office].tsx",
     ],
     "exclude": [
         "node_modules"

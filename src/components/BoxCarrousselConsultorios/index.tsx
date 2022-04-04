@@ -3,7 +3,7 @@ import { Container } from './style';
 
 
 
-const BoxCarroussel = ({ refs }) => {
+const BoxCarrousselClinica = ({ refs }) => {
     const caroussel = useRef(null)
 
     const handleLeftClick = () => {
@@ -46,4 +46,4 @@ const BoxCarroussel = ({ refs }) => {
     )
 };
 
-export default BoxCarroussel
+export default BoxCarrousselClinica
