@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const URL_BASE = 'http://newapi.eklinic.com.br/api/'
+export const URL_BASE = 'http://api.eklinic.com.br/api/'
 
 export const api = axios.create({
     baseURL: 'https://api.eklinic.com.br/api/'

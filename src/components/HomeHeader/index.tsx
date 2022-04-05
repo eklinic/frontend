@@ -3,12 +3,18 @@ import Link from 'next/link'
 
 import { Container } from './style'
 import Logo from '../../assets/logotipoEklinic.svg'
+import useWindowDimensions from '../../units/useWindowDimension'
 
-const Home: React.FC = () => {
+const HomeHeader: React.FC = ()  => {
+
+
+
     return (
         <Container>
             <div className="centralizerMenu">
-                <Logo className="logotipo" />
+                <div className="conteinerLogo">
+                    <Logo className="logotipo" />
+                </div>
 
                 <nav className="lateralConteiner">
                     <ul className="menu">
@@ -27,7 +33,7 @@ const Home: React.FC = () => {
                     </ul>
                     <div className="btnsContainer">
                         <Link href='/clinicas'>
-                            <button className="btnIr">RESERVE JÁ</button>
+                            <button className="btnIr">RESERVAR JÁ</button>
                         </Link>
                     </div>
                 </nav>
@@ -36,4 +42,4 @@ const Home: React.FC = () => {
     )
 }
 
-export default Home
+export default HomeHeader

@@ -7,18 +7,33 @@ export const Container = styled.div`
   max-width: 100%;
   background: ${props => props.theme.colors.backgroundCinza};
 
+  @media(max-width:600px){
+    height: 100%;
+    }
+
   .containerCitacao {
     height: 20rem;
     display: flex;
     align-items: center;
 
+    @media(max-width:600px){
+        flex-direction:column;
+        height: 100%;
+    }
+
     .citacao {
-      height: 100%;
-      color: ${props => props.theme.colors.azulEscuro};
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+        height: 100%;
+        color: ${props => props.theme.colors.azulEscuro};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @media(max-width:600px){
+            padding:0rem 0rem 1rem 1rem;
+            flex-direction:column;
+            height: 90%;
+        }
 
       span {
         font-weight: 700;
@@ -54,6 +69,12 @@ export const TextChamada = styled.h1`
   width: 80%;
   text-align: left;
   font-weight: 400;
+
+  @media(max-width:600px){
+    font-size: 38px;
+    width: 100%;
+    padding: 1rem 0px 0px 0rem;
+}
 `
 
 export const TextAdj = styled.p`
@@ -80,4 +101,10 @@ export const TextTitle = styled.p`
   font-weight: 700;
   color: ${props => props.theme.colors.backgroundCinza};
   background: ${props => props.theme.colors.azulEscuro};
+
+  @media(max-width:600px){
+    width: 70%;
+    padding: 0px 0px 0px 0rem;
+    }
+
 `

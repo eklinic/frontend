@@ -17,12 +17,20 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
 
+    @media(max-width:600px){
+        flex-wrap:wrap;
+    }
+
     .conteinerBeneficios {
       width: 50%;
       display: flex;
       align-items: center;
       flex-direction: column;
       color: ${props => props.theme.colors.azulEscuro};
+
+      @media(max-width:600px){
+        width: 100%;
+        }
 
       .beneficios {
         width: 100%;
@@ -88,6 +96,12 @@ export const TextChamada = styled.h1`
   margin: 0 auto;
   font-weight: 700;
   color: ${props => props.theme.colors.azulEscuro};
+
+  @media(max-width:600px){
+    padding: 0px 0px 0px 0rem;
+    width: 100%;
+
+        }
 `
 
 export const TextAdj = styled.p`

@@ -12,6 +12,10 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
 
+    @media(max-width:600px){
+        flex-wrap:wrap;
+    }
+
     .selecionar {
       margin: 2rem 0rem;
       width: 20rem;
@@ -22,6 +26,10 @@ export const Container = styled.div`
       align-items: center;
       justify-content: space-evenly;
       font-weight: 700;
+
+      @media(max-width:600px){
+        margin: 1rem 0rem;
+    }
 
       h3 {
         width: 30%;
@@ -52,12 +60,21 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
 
+    @media(max-width:600px){
+        flex-wrap:wrap;
+    }
+
     .box {
       width: 13rem;
       border-radius: 20px;
       height: 12rem;
       border: 1px solid ${props => props.theme.colors.azulEscuro};
       padding: 0.4rem;
+
+      @media(max-width:600px){
+        width:12rem;
+        margin-bottom:1rem;
+        }
 
       .title {
         display: flex;
@@ -121,4 +138,9 @@ export const TextTitle = styled.p`
   font-weight: 700;
   color: ${props => props.theme.colors.backgroundCinza};
   background: ${props => props.theme.colors.azulEscuro};
+
+  @media(max-width:600px){
+    width: 80%;
+    padding: 0px 0px 0px 0rem;
+  }
 `

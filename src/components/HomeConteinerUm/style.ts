@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-
   margin: auto auto;
 
   .divisor {
@@ -39,14 +38,24 @@ export const Container = styled.div`
     align-items: center;
     height: 30rem;
 
+    @media(max-width:600px){
+        flex-direction:column;
+        height: 100%;
+    }
+
     .conteinerText {
       position: relative;
       width: 50%;
-
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
+
+      @media(max-width:600px){
+        padding-top:2rem;
+        flex-direction:column;
+        width: 100%;
+    }
 
       .textAdj {
         font-size: 14px;
@@ -81,6 +90,20 @@ export const Container = styled.div`
       margin: 2rem;
       display: flex;
       align-items: center;
+
+        @media(max-width:600px){
+            max-width:80%;
+        }
+
+        .imgs{
+            object-fit: contain;
+            max-width: 100%;
+
+            @media(max-width:600px){
+            object-fit: none;
+            height:100%;
+            }
+        }
     }
   }
 `
@@ -93,6 +116,12 @@ export const TextChamada = styled.h1`
   font-size: 40px;
   width: 80%;
   text-align: left;
+
+  @media(max-width:600px){
+    font-size: 34px;
+    width: 90%;
+    text-align: center;
+  }
 `
 
 export const TextAdj = styled.p`
@@ -100,4 +129,10 @@ export const TextAdj = styled.p`
   width: 80%;
   text-align: left;
   color: ${props => props.theme.colors.cinza};
+
+  @media(max-width:600px){
+    font-size: 28px;
+    width: 90%;
+    text-align: center;
+  }
 `

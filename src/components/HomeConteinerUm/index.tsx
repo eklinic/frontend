@@ -5,9 +5,13 @@ import { Container, Centralizer, TextChamada, TextAdj } from './style'
 
 import Profissional from '../../assets/atendimentoProfissional.svg'
 import Gestor from '../../assets/gestor.svg'
+import MobileProf from '../../assets/mobile-profissional-home.svg'
+import MobileGestor from '../../assets/mobile-gestor-home.svg'
+import useWindowDimensions from '../../units/useWindowDimension'
 
 const HomeContainerUm: React.FC = () => {
     const [categoria, setCategoria] = useState<number>(1)
+    const { width } = useWindowDimensions();
 
     return (
         <Container>
@@ -29,13 +33,13 @@ const HomeContainerUm: React.FC = () => {
                                 </div>
                             </div>
                             <div className="conteinerImg">
-                                <Profissional style={{ objectFit: 'contain', maxWidth: '100%' }} />
+                                {width > 600 ? <Profissional className='imgs' /> : <MobileProf />}
                             </div>
                         </>
                     ) : (
                         <>
                             <div className="conteinerImg">
-                                <Gestor className="imagemConsult" />
+                                {width > 600 ? <Gestor className='imgs' /> : <MobileGestor />}
                             </div>
                             <div className="conteinerText">
                                 <TextChamada>

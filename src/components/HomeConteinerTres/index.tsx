@@ -25,7 +25,7 @@ const HomeContainerTres: React.FC = () => {
 
                 <div className="conteinerConteudo">
                     <div className="conteinerBeneficios">
-                        <h2 className="animate__fadeInUp">Para os profissionais</h2>
+                        <h2 >Para os profissionais</h2>
                         <div className="beneficios">
                             <div className="cardBeneficio prof">
                                 <div className="vetor">
@@ -66,7 +66,7 @@ const HomeContainerTres: React.FC = () => {
                         <div className="beneficios">
                             <div className="cardBeneficio clinica">
                                 <div className="vetor">
-                                    <Pin className="vetor" />
+                                    <Pin />
                                 </div>
                                 <div className="text">
                                     <p>Melhor aproveitamento do espaço físico</p>
@@ -74,7 +74,7 @@ const HomeContainerTres: React.FC = () => {
                             </div>
                             <div className="cardBeneficio clinica">
                                 <div className="vetor">
-                                    <Grafico className="vetor" />
+                                    <Grafico />
                                 </div>
                                 <div className="text">
                                     <p>Aumento a taxa de ocupação</p>
@@ -82,7 +82,7 @@ const HomeContainerTres: React.FC = () => {
                             </div>
                             <div className="cardBeneficio clinica">
                                 <div className="vetor">
-                                    <Roudanas className="vetor" />
+                                    <Roudanas />
                                 </div>
 
                                 <div className="text">

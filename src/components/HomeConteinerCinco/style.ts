@@ -15,14 +15,20 @@ export const Container = styled.div`
             flex-direction:column;
             align-items:center;
             justify-content:center;
+
+            @media(max-width:600px){
+                padding-left:1rem;
+            }
         }
 
         .conteinerMidias{
             margin:0 auto;
-            width:30%;
+            width:40%;
             display:flex;
             justify-content:space-around;
             align-items:center;
+
+
 
             .link{
                 cursor:pointer;
@@ -40,7 +46,7 @@ export const Centralizer = styled.div`
   height:100%;
 `
 export const TextChamada = styled.h1`
-  padding: 0px 0px 0px 1rem;
+  padding: 0px 0px 0px 0rem;
   font-size: 36px;
   text-decoration: underline;
   font-weight: 700;

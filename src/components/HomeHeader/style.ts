@@ -8,6 +8,12 @@ export const Container = styled.div`
   background-color:${props => props.theme.colors.branco};
   box-shadow: 0px 1px 8px ${props => props.theme.colors.sombraCinza};
 
+  @media (max-width:600px){
+    height: 100%;
+  }
+
+
+
   .centralizerMenu {
     max-width: 1300px;
     height: 100%;
@@ -16,10 +22,15 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    .logotipo {
-      width: 15%;
-      max-height: 100%;
+    .conteinerLogo{
+
+        .logotipo {
+            width: 100%;
+            max-height: 100%;
+        }
     }
+
+
 
     .lateralConteiner {
       width: 50%;
