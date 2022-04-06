@@ -8,13 +8,14 @@ import Gestor from '../../assets/gestor.svg'
 import MobileProf from '../../assets/mobile-profissional-home.svg'
 import MobileGestor from '../../assets/mobile-gestor-home.svg'
 import useWindowDimensions from '../../units/useWindowDimension'
+import Link from 'next/link'
 
 const HomeContainerUm: React.FC = () => {
     const [categoria, setCategoria] = useState<number>(1)
     const { width } = useWindowDimensions();
 
     return (
-        <Container>
+        <Container id="inicio">
             <Centralizer>
                 <div className="conteinerConteudo">
                     {categoria === 1 ? (
@@ -29,7 +30,9 @@ const HomeContainerUm: React.FC = () => {
                                 <TextAdj>Como você nunca viu.</TextAdj>
 
                                 <div className="btnSaibaMais">
-                                    <button>CONHEÇA JÁ!</button>
+                                    <Link href="/clinicas">
+                                        <button >CONHEÇA JÁ!</button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="conteinerImg">
@@ -51,7 +54,9 @@ const HomeContainerUm: React.FC = () => {
                                 <TextAdj>Como você sempre sonhou.</TextAdj>
 
                                 <div className="btnSaibaMais">
-                                    <button>CONHEÇA JÁ!</button>
+                                    <Link href="/clinicas">
+                                        <button >CONHEÇA JÁ!</button>
+                                    </Link>
                                 </div>
                             </div>
                         </>

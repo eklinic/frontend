@@ -7,6 +7,8 @@ export const Container = styled.div`
   max-width: 100%;
   color: ${props => props.theme.colors.azulEscuro};
 
+
+
   .conteinerSelect {
     width: 100%;
     display: flex;
@@ -67,9 +69,10 @@ export const Container = styled.div`
     .box {
       width: 13rem;
       border-radius: 20px;
-      height: 12rem;
       border: 1px solid ${props => props.theme.colors.azulEscuro};
       padding: 0.4rem;
+      height:6rem;
+      display:flex;
 
       @media(max-width:600px){
         width:12rem;
@@ -101,6 +104,35 @@ export const Container = styled.div`
         height: 50%;
       }
     }
+  }
+
+  .conteinerButtons{
+      width: 100%;
+      margin:2rem 0rem 1.5rem;
+      display:flex;
+      justify-content:center;
+
+      button{
+          margin: 0rem 1rem;
+          padding:1rem;
+          border:none;
+          font-weight:700;
+          width:20rem;
+          cursor:pointer;
+
+      }
+
+      .ativo{
+          background:${props => props.theme.colors.azulEscuro};
+          color:${props => props.theme.colors.branco};
+      }
+
+      .inativo{
+          background:none;
+          border:1px solid ${props => props.theme.colors.azulEscuro};
+          color:${props => props.theme.colors.azulEscuro};
+
+      }
   }
 `
 

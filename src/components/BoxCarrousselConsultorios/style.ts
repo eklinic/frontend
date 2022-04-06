@@ -26,6 +26,10 @@ width:100%;
         display:flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+
+        @media(max-width:600px){
+            max-width:90vw;
+        }
         :-webkit-overflow-scrolling:touch;
 
         :-webkit-scrollbar{

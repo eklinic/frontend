@@ -14,11 +14,12 @@ import Profissional from '../../assets/profissional.svg'
 import ProfissionalBranco from '../../assets/profissional_branco.svg'
 import Clinica from '../../assets/clinica_cor.svg'
 import ClinicaBranco from '../../assets/clinica_branco.svg'
+import Link from 'next/link'
 
 const homeContainerQuatro: React.FC = () => {
     const [categoria, setCategoria] = useState<number>(1)
     return (
-        <Container>
+        <Container id='comofunciona'>
             <Centralizer>
                 <TextTitle>COMO FUNCIONA?</TextTitle>
 
@@ -77,37 +78,37 @@ const homeContainerQuatro: React.FC = () => {
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">1</h2>
-                                <h4>Acesse RESERVE JÁ!</h4>
+                                <h4>Escolha um de nossos consultórios</h4>
                             </div>
-                            <div className="image">imagem</div>
+
                         </div>
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">2</h2>
-                                <h4>Escolha a clínica desejada</h4>
+                                <h4>Entre em contato com nosso atendimento</h4>
                             </div>
-                            <div className="image">imagem</div>
+
                         </div>
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">3</h2>
-                                <h4>Entre em contato com nosso atendimento</h4>
+                                <h4>Confirme seus dados e a disponibilidade</h4>
                             </div>
-                            <div className="image">imagem</div>
+
                         </div>
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">4</h2>
-                                <h4>Realize a confirmação e pagamento</h4>
+                                <h4>Se dirija a clínica na data e hora marcada</h4>
                             </div>
-                            <div className="image">imagem</div>
+
                         </div>
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">5</h2>
-                                <h4>Realize seu atendimento</h4>
+                                <h4>Realize seu atendimento e repita o processo</h4>
                             </div>
-                            <div className="image">imagem</div>
+
                         </div>
                     </div>
                 ) : (
@@ -117,24 +118,28 @@ const homeContainerQuatro: React.FC = () => {
                                 <h2 className="number">1</h2>
                                 <h4>Entre em contato com nosso atendimento</h4>
                             </div>
-                            <div className="image">imagem</div>
                         </div>
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">2</h2>
-                                <h4>Cadastre sua clínica e seus consultórios disponíveis</h4>
+                                <h4>Passe os dados, disponibilidade e valores</h4>
                             </div>
-                            <div className="image">imagem</div>
                         </div>
                         <div className="box">
                             <div className="title">
                                 <h2 className="number">3</h2>
-                                <h4>Disponibilize para os profissionais cadastrados</h4>
+                                <h4>Compartilhe e fature</h4>
                             </div>
-                            <div className="image">imagem</div>
                         </div>
                     </div>
                 )}
+
+                <div className="conteinerButtons">
+                    <Link href='/clinicas'>
+                        <button className={categoria === 1 ? "ativo" : "inativo"}>Quero reservar um consultório</button>
+                    </Link>
+                    <button onClick={() => window.open('https://api.whatsapp.com/send?phone=5543999186408&text=Oi!%20Gostaria%20de%20saber%20como%20fa%C3%A7o%20para%20compartilhar%20meu%20consult%C3%B3rio%20com%20voc%C3%AAs!')} className={categoria === 2 ? "ativo" : "inativo"}>Quero disponibilizar meu consultório</button>
+                </div>
             </Centralizer>
         </Container>
     )

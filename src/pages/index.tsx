@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>Homepage</title>
+                <title>Bem vindo a e.Klinic - Especialistas em compartilhamendo de clínicas e consultórios</title>
             </Head>
             <Container>
                 {width > 600 ? <Header /> : <HeaderMobile />}

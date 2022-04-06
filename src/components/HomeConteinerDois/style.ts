@@ -34,7 +34,7 @@ export const Container = styled.div`
             flex-direction: column;
 
             @media(max-width:600px){
-                padding:0rem 0rem 1rem 1rem;
+                padding:1rem 0rem 2rem 1rem;
                 flex-direction:column;
                 height: 120%;
             }
@@ -58,6 +58,7 @@ export const Container = styled.div`
                 padding: 0.4rem 5rem;
                 color: ${props => props.theme.colors.branco};
                 font-weight: 700;
+                cursor:pointer;
                 }
             }
         }
@@ -75,7 +76,8 @@ export const TextChamada = styled.h1`
   font-weight: 400;
 
   @media(max-width:600px){
-    font-size: 38px;
+    font-size: 30px;
+    text-align:center;
     width: 100%;
     padding: 1rem 0px 0px 0rem;
 }
@@ -86,6 +88,10 @@ export const TextAdj = styled.p`
   width: 80%;
   text-align: left;
   color: ${props => props.theme.colors.cinza};
+
+  @media(max-width:600px){
+    text-align:right;
+    }
 `
 
 export const TextBasic = styled.p`

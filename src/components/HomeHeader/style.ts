@@ -27,6 +27,7 @@ export const Container = styled.div`
         .logotipo {
             width: 100%;
             max-height: 100%;
+            cursor:pointer;
         }
     }
 
@@ -45,8 +46,10 @@ export const Container = styled.div`
         height: 5rem;
         width: 70%;
 
-        li {
-          cursor: pointer;
+        .link {
+            text-decoration:none;
+            cursor: pointer;
+            color: ${props => props.theme.colors.azulEscuro};
 
           .line {
             width: 1rem;

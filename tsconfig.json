@@ -29,7 +29,9 @@
         "src/pages/clinicas.tss",
         "src/pages/index.tsx",
         "src/components/BoxCarroussel/index.tsx",
-        "src/components/BoxCarroussel/style.js", "src/pages/clinicas/[office].tsx",
+        "src/components/BoxCarroussel/style.js",
+        "src/pages/clinicas/[office].tsx",
+        "src/services/smothscroll.js",
     ],
     "exclude": [
         "node_modules"

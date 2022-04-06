@@ -155,6 +155,7 @@ export const Container = styled.div`
     }
 
     .descritivo{
+        padding:1rem 0rem;
         .consultorios{
             display:flex;
             flex-wrap:wrap;

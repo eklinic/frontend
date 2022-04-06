@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 import {
@@ -12,7 +13,7 @@ import {
 
 const homeContainerDois: React.FC = () => {
     return (
-        <Container>
+        <Container id='quemSomos'>
             <Centralizer>
                 <TextTitle>QUEM SOMOS</TextTitle>
                 <div className="containerCitacao">
@@ -40,7 +41,9 @@ const homeContainerDois: React.FC = () => {
                             Que tal adquirir essa nova pespectiva de local de trabalho?
                         </TextBasic>
                         <div className="conteinerBtn">
-                            <button>RESERVE JÁ!</button>
+                            <Link href='/clinicas'>
+                                <button>RESERVE JÁ!</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

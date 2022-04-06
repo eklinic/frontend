@@ -7,6 +7,7 @@ import Excluir from '../../assets/excluir.svg'
 import Logo from '../../assets/logotipoEklinic.svg'
 
 import Link from "next/link"
+import SmothScroll from "../../services/smothscroll"
 
 const HeaderMobile: React.FC = () => {
     const route = useRouter()
@@ -32,24 +33,38 @@ const HeaderMobile: React.FC = () => {
                 <ConteinerSubMenu>
                     <nav className="conteinerNav">
                         <ul className="menu">
-                            <li className='menuItemNormal'>
-                                Início
-                                <div className="line" />
-                            </li>
-                            <li className='menuItemNormal'>
-                                Conheça
-                                <div className="line" />
-                            </li>
-                            <li className='menuItemNormal'>
-                                Quem somos
-                                <div className="line" />
-                            </li>
+                            <SmothScroll className="menuItemNormal" href="#inicio">
+                                <li>
+                                    Início
+                                    <div className="line" />
+                                </li>
+                            </SmothScroll>
+                            <SmothScroll className="menuItemNormal" href="#quemSomos">
+                                <li>
+                                    Quem somos
+                                    <div className="line" />
+                                </li>
+                            </SmothScroll>
+                            <SmothScroll className="menuItemNormal" href="#conheca">
+                                <li>
+                                    Benefícios
+                                    <div className="line" />
+                                </li>
+                            </SmothScroll>
+                            <SmothScroll className="menuItemNormal" href="#comofunciona">
+                                <li>
+                                    Como funciona?
+                                    <div className="line" />
+                                </li>
+                            </SmothScroll>
 
                         </ul>
                     </nav>
 
                     <ul className="conteinerButtons">
-                        <button className="btnIr">RESERVAR JÁ</button>
+                        <Link href='/clinicas'>
+                            <button className="btnIr">RESERVAR JÁ</button>
+                        </Link>
                     </ul>
                 </ConteinerSubMenu> : null}
 

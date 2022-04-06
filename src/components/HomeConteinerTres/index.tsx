@@ -19,7 +19,7 @@ import Grana from '../../assets/grana.svg'
 
 const HomeContainerTres: React.FC = () => {
     return (
-        <Container>
+        <Container id="conheca">
             <Centralizer>
                 <TextChamada>BENEFÍCIOS</TextChamada>
 

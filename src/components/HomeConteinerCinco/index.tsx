@@ -26,15 +26,12 @@ const HomeContainerTres: React.FC = () => {
                         <p>Entre em contato com nosso atendimento:</p>
                     </div>
                     <div className="conteinerMidias">
-                        <Link href="/" >
-                            <Face className="link" />
-                        </Link>
 
-                        <Link href="/">
+                        <Link href="https://www.instagram.com/eklinic">
                             <Insta className="link" />
                         </Link>
 
-                        <Link href="/">
+                        <Link href="https://api.whatsapp.com/send?phone=5543999186408">
                             <Whats className="link" />
                         </Link>
                     </div>

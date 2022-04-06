@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { URL_BASE, ClinicaAtributteProps, api } from '../../services/services'
+import Head from 'next/head'
 
 
 import { Container, Centralizer } from '../../styles/pages/Clinicas'
@@ -38,49 +39,54 @@ const Clinicas = () => {
 
 
     return (
-        <Container>
-            {width > 600 ? <ClinicasHeader /> : <HomeMobileHeader />}
+        <>
+            <Head>
+                <title>Clínicas Disponíveis - e.Klinic - Especialistas em compartilhamendo de clínicas e consultórios</title>
+            </Head>
+            <Container>
+                {width > 600 ? <ClinicasHeader /> : <HomeMobileHeader />}
 
-            <Centralizer>
-                <div className='conteudo'>
-                    {load === true ?
-                        <Loader /> :
-                        <>
-                            <div className="boxes">
-                                {clinicas.map((clinica, key) =>
-                                    <BoxClinic
-                                        key={key}
-                                        urlImage={clinica.attributes?.clinic_pictures.data}
-                                        cliniId={clinica?.id}
-                                        cliniRua={clinica.attributes?.address_street}
-                                        cliniCidade={clinica.attributes?.address_city}
-                                        cliniQtdeConsult={clinica.attributes?.offices.data.length}
-                                        cliniDispoMedicos={clinica.attributes?.clinic_profissionals.medicina}
-                                        cliniDispoNutricao={clinica.attributes?.clinic_profissionals.nutricao}
-                                        cliniDispoPsico={clinica.attributes?.clinic_profissionals.psicologo}
-                                        cliniDispoFisio={clinica.attributes?.clinic_profissionals.fisioterapia}
-                                        cliniPreco={clinica.attributes?.offices.data[0].attributes.office_price_days}
-                                    />
-                                )}
-                            </div>
+                <Centralizer>
+                    <div className='conteudo'>
+                        {load === true ?
+                            <Loader /> :
+                            <>
+                                <div className="boxes">
+                                    {clinicas.map((clinica, key) =>
+                                        <BoxClinic
+                                            key={key}
+                                            urlImage={clinica.attributes?.clinic_pictures.data}
+                                            cliniId={clinica?.id}
+                                            cliniRua={clinica.attributes?.address_street}
+                                            cliniCidade={clinica.attributes?.address_city}
+                                            cliniQtdeConsult={clinica.attributes?.offices.data.length}
+                                            cliniDispoMedicos={clinica.attributes?.clinic_profissionals.medicina}
+                                            cliniDispoNutricao={clinica.attributes?.clinic_profissionals.nutricao}
+                                            cliniDispoPsico={clinica.attributes?.clinic_profissionals.psicologo}
+                                            cliniDispoFisio={clinica.attributes?.clinic_profissionals.fisioterapia}
+                                            cliniPreco={clinica.attributes?.offices.data[0].attributes.office_price_days}
+                                        />
+                                    )}
+                                </div>
 
-                            <GoogleMaps clinics={clinicas} />
-                        </>
+                                <GoogleMaps clinics={clinicas} />
+                            </>
 
-                    }
+                        }
 
-                </div>
-
-
-
-            </Centralizer>
-
-
+                    </div>
 
 
-        </Container>
+
+                </Centralizer>
 
 
+
+
+            </Container>
+
+
+        </>
     )
 }
 
