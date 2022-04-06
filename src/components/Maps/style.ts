@@ -10,6 +10,24 @@ export const Container = styled.div`
     height:60vh;
     }
 
+    .ConteinerJanela{
+        text-align:center;
+        width:12rem;
+        color:${props => props.theme.colors.azulEscuro};
+        display:flex;
+
+        .perfil{
+            height:5rem;
+            width:5rem;
+            border-radius:200px;
+        }
+        .texts{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            cursor:pointer;
+        }
+    }
 
 `
 
