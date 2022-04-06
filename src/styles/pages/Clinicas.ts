@@ -7,6 +7,10 @@ export const Container = styled.div`
 
   .conteudo{
     display:flex;
+
+    @media(max-width:600px){
+        flex-direction: column-reverse;
+    }
   }
 
   .boxes{

@@ -6,6 +6,10 @@ export const Container = styled.div`
   margin: 1rem;
   box-shadow: 0px 0px 5px ${props => props.theme.colors.sombraCinza};
 
+  @media(max-width:600px){
+    height:60vh;
+    }
+
 
 `
 

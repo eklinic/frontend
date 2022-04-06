@@ -7,57 +7,61 @@ export const Container = styled.div`
   max-width: 100%;
   background: ${props => props.theme.colors.backgroundCinza};
 
-  @media(max-width:600px){
-    height: 100%;
-    }
-
-  .containerCitacao {
-    height: 20rem;
-    display: flex;
-    align-items: center;
-
     @media(max-width:600px){
-        flex-direction:column;
-        height: 100%;
+    height: 45rem;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem;
     }
 
-    .citacao {
-        height: 100%;
-        color: ${props => props.theme.colors.azulEscuro};
+    .containerCitacao {
+        height: 20rem;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
 
         @media(max-width:600px){
-            padding:0rem 0rem 1rem 1rem;
             flex-direction:column;
-            height: 90%;
+            height: 100%;
         }
 
-      span {
-        font-weight: 700;
-      }
-    }
-    .descricao {
-      width: 100%;
+        .citacao {
+            height: 100%;
+            color: ${props => props.theme.colors.azulEscuro};
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
 
-      .conteinerBtn {
-        padding: 1rem 0rem;
-        display: flex;
-        justify-content: center;
+            @media(max-width:600px){
+                padding:0rem 0rem 1rem 1rem;
+                flex-direction:column;
+                height: 120%;
+            }
 
-        button {
-          border: none;
-          border-radius: 5px;
-          background: ${props => props.theme.colors.azulEscuro};
-          padding: 0.4rem 5rem;
-          color: ${props => props.theme.colors.branco};
-          font-weight: 700;
+            span {
+                font-weight: 700;
+            }
         }
-      }
+        .descricao {
+            width: 100%;
+
+            .conteinerBtn {
+                padding: 1rem 0rem;
+                display: flex;
+                justify-content: center;
+
+                button {
+                border: none;
+                border-radius: 5px;
+                background: ${props => props.theme.colors.azulEscuro};
+                padding: 0.4rem 5rem;
+                color: ${props => props.theme.colors.branco};
+                font-weight: 700;
+                }
+            }
+        }
     }
-  }
 `
 
 export const Centralizer = styled.div`

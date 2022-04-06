@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import theme from '../theme'
 
 export const Container = styled.div`
-  max-height: 100vh;
-  max-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   color:${props => props.theme.colors.azulEscuro};
   text-align:left;
 
@@ -11,14 +11,23 @@ export const Container = styled.div`
       display:flex;
       padding:0.8rem 0rem;
 
+        @media(max-width:600px){
+            flex-wrap:wrap;
+        }
+
         .infosClinica{
-        display:flex;
-        flex-direction:column;
-        width:60%;
+            display:flex;
+            flex-direction:column;
+            width:60%;
+
+            @media(max-width:600px){
+                width:100%;
+            }
 
             .infosTitle{
-            padding:0.8rem 0rem;
+                padding:0.8rem 0rem;
             }
+
             .dadosClinica{
 
                 .infosCaract{
@@ -30,6 +39,10 @@ export const Container = styled.div`
                         display: flex;
                         align-items:center;
                         max-height:5rem;
+
+                        @media(max-width:600px){
+                            max-height:100%;
+                        }
 
                         .infosHoras{
                             display:flex;
@@ -70,6 +83,10 @@ export const Container = styled.div`
                             flex-direction:column;
                             max-height:5rem;
 
+                            @media(max-width:600px){
+                                width:100%;
+                            }
+
                             .profs{
                                 max-width:100%;
                                 display:flex;
@@ -96,6 +113,10 @@ export const Container = styled.div`
                         .infosItems{
                             width:50%;
 
+                            @media(max-width:600px){
+                                width:100%;
+                            }
+
                             .items{
                                 display:flex;
                                 flex-direction:column;
@@ -117,6 +138,14 @@ export const Container = styled.div`
 
                         }
                     }
+
+                    .caracteristicas{
+                        @media(max-width:600px){
+                            display:flex;
+                            flex-wrap:wrap;
+                            justify-items:center;
+                        }
+                    }
                 }
 
 
@@ -135,9 +164,17 @@ export const Container = styled.div`
             padding:1rem 0rem 0rem 0rem;
             width:50%;
 
+            @media(max-width:600px){
+                width:100%;
+            }
+
             .title{
                 display:flex;
                 justify-content:space-between;
+
+                @media(max-width:600px){
+                        flex-wrap:wrap;
+                    }
 
                 .priceBox{
                     display:flex;
@@ -145,6 +182,11 @@ export const Container = styled.div`
                     margin:0rem 1rem;
                     width:60%;
                     display:flex;
+
+                    @media(max-width:600px){
+                        padding:1rem 0rem;
+                        width:100%;
+                    }
 
                     p{
                         margin-right:0.5rem;
@@ -161,6 +203,10 @@ export const Container = styled.div`
             :nth-child(odd){
                 .traco{
                     display:flex;
+
+                    @media(max-width:600px){
+                        display:none;
+                    }
                 }
             }
 
@@ -169,6 +215,10 @@ export const Container = styled.div`
                 justify-content:space-between;
                 align-items:center;
 
+                @media(max-width:600px){
+                    flex-wrap:wrap;
+                }
+
                 .details{
                     height:20rem;
                     width:100%;
@@ -176,6 +226,24 @@ export const Container = styled.div`
                     flex-direction:column;
                     align-items:center;
                     justify-content:space-between;
+
+                    @media(max-width:600px){
+                        height:100%;
+                    }
+
+                    .caract{
+                        display:flex;
+                        flex-wrap:wrap;
+                        justify-content:center;
+
+                        p{
+                            margin:0.3rem;
+
+                            @media(max-width:600px){
+                                margin:1rem;
+                            }
+                        }
+                    }
 
                     .disponibilidade{
                         display:flex;
@@ -189,6 +257,10 @@ export const Container = styled.div`
                             text-align:center;
                             border-radius:5px;
                             padding:0.125rem;
+                        }
+
+                        @media(max-width:600px){
+                            margin:1rem;
                         }
                     }
 
@@ -205,41 +277,48 @@ export const Container = styled.div`
                             align-items:center;
                             border-radius:5px;
                             cursor:pointer;
-                            background:${props=>props.theme.colors.azulModerado};
+                            background:${props => props.theme.colors.azulModerado};
                             color:#ffffff;
                             font-size:120%;
 
+                            @media(max-width:600px){
+                                margin:0rem 0rem 1rem 0rem;
+                            }
+
 
                             :hover{
-                                background:${props=>props.theme.colors.azulEscuro};
+                                background:${props => props.theme.colors.azulEscuro};
                                 font-weight:700;
                             }
                         }
                     }
-                }
 
-                .profs{
-                    display:flex;
-                    max-width:100%;
-                    flex-wrap:wrap;
-                    justify-content:space-around;
+                    .profs{
+                        display:flex;
+                        max-width:100%;
+                        flex-wrap:wrap;
+                        justify-content:space-around;
 
-                    p{
-                        margin:0.125rem;
-                        padding: 0.25rem;
-                        color:${props => props.theme.colors.cinza};
+                        p{
+                            margin:0.125rem;
+                            padding: 0.25rem;
+                            color:${props => props.theme.colors.cinza};
+                        }
+
+                        .true{
+                            background:${props => props.theme.colors.azulEscuro};
+                            color:${props => props.theme.colors.branco};
+                        }
+
+                        .traco{
+                            display:none;
+                            padding: 0rem 0rem 0rem 0.25rem;
+                        }
                     }
 
-                    .true{
-                        background:${props => props.theme.colors.azulEscuro};
-                        color:${props => props.theme.colors.branco};
-                    }
                 }
             }
-            .traco{
-                display:none;
-                padding: 0rem 0rem 0rem 0.25rem;
-            }
+
         }
     }
 
@@ -248,6 +327,11 @@ export const Container = styled.div`
         width:1rem;
         border-left:1px solid ${props => props.theme.colors.cinza};
         opacity:30%;
+
+        @media(max-width:600px){
+            border-bottom:1px solid ${props => props.theme.colors.cinza};
+            border-left:none;
+        }
     }
 
 `
@@ -263,6 +347,11 @@ export const TextAdj = styled.p`
   font-size: 20px;
   text-align: left;
   color: ${props => props.theme.colors.cinza};
+
+  @media(max-width:600px){
+        padding:0rem 1rem;
+        width:100%;
+    }
 `
 
 export const TextBasic = styled.p`
@@ -285,6 +374,10 @@ export const TextTitle = styled.p`
   width: 40%;
   margin: 0 auto;
   font-weight: 700;
+
+  @media(max-width:600px){
+    width: 100%;
+    }
 `
 
 

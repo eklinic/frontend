@@ -24,12 +24,13 @@ const Home = () => {
                 <title>Homepage</title>
             </Head>
             <Container>
-                {width > 790 ? <Header /> : <HeaderMobile />}
+                {width > 600 ? <Header /> : <HeaderMobile />}
                 <HomeContainerUm />
                 <HomeContainerDois />
                 <HomeContainerTres />
                 <HomeContainerQuatro />
                 <HomeContainerCinco />
+                <Footer />
             </Container>
         </>
     )

@@ -7,12 +7,15 @@ import ClinicasHeader from '../../components/ClinicasHeader'
 import GoogleMaps from '../../components/Maps'
 import BoxClinic from '../../components/BoxClinic'
 import Loader from '../../components/Loader'
+import useWindowDimensions from '../../services/units'
+import HomeMobileHeader from '../../components/HeaderClinicaMobile'
 
 
 
 const Clinicas = () => {
     const [clinicas, setClinicas] = useState([])
     const [load, setLoad] = useState(true)
+    const { width } = useWindowDimensions()
 
     useEffect(() => {
 
@@ -33,11 +36,10 @@ const Clinicas = () => {
 
     }, [])
 
-    console.log(clinicas)
 
     return (
         <Container>
-            <ClinicasHeader />
+            {width > 600 ? <ClinicasHeader /> : <HomeMobileHeader />}
 
             <Centralizer>
                 <div className='conteudo'>
@@ -48,16 +50,16 @@ const Clinicas = () => {
                                 {clinicas.map((clinica, key) =>
                                     <BoxClinic
                                         key={key}
-                                        urlImage={clinica.attributes.clinic_pictures.data}
-                                        cliniId={clinica.id}
-                                        cliniRua={clinica.attributes.address_street}
-                                        cliniCidade={clinica.attributes.address_city}
-                                        cliniQtdeConsult={clinica.attributes.offices.data.length}
-                                        cliniDispoMedicos={clinica.attributes.clinic_profissionals.medicina}
-                                        cliniDispoNutricao={clinica.attributes.clinic_profissionals.nutricao}
-                                        cliniDispoPsico={clinica.attributes.clinic_profissionals.psicologo}
-                                        cliniDispoFisio={clinica.attributes.clinic_profissionals.fisioterapia}
-                                        cliniPreco={clinica.attributes.offices.data[0].attributes.office_price_days}
+                                        urlImage={clinica.attributes?.clinic_pictures.data}
+                                        cliniId={clinica?.id}
+                                        cliniRua={clinica.attributes?.address_street}
+                                        cliniCidade={clinica.attributes?.address_city}
+                                        cliniQtdeConsult={clinica.attributes?.offices.data.length}
+                                        cliniDispoMedicos={clinica.attributes?.clinic_profissionals.medicina}
+                                        cliniDispoNutricao={clinica.attributes?.clinic_profissionals.nutricao}
+                                        cliniDispoPsico={clinica.attributes?.clinic_profissionals.psicologo}
+                                        cliniDispoFisio={clinica.attributes?.clinic_profissionals.fisioterapia}
+                                        cliniPreco={clinica.attributes?.offices.data[0].attributes.office_price_days}
                                     />
                                 )}
                             </div>

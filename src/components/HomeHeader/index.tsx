@@ -5,7 +5,7 @@ import { Container } from './style'
 import Logo from '../../assets/logotipoEklinic.svg'
 import useWindowDimensions from '../../units/useWindowDimension'
 
-const HomeHeader: React.FC = ()  => {
+const HomeMobileHeader: React.FC = () => {
 
 
 
@@ -42,4 +42,4 @@ const HomeHeader: React.FC = ()  => {
     )
 }
 
-export default HomeHeader
+export default HomeMobileHeader

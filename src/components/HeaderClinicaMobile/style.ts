@@ -8,8 +8,6 @@ export const ConteinerMenu = styled.div`
     box-shadow: 0px 1px 8px ${props => props.theme.colors.sombraCinza};
     padding:0rem 1rem;
 
-
-
     .flexRow{
         height:5.43rem;
         display: flex;

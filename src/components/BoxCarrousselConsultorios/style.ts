@@ -21,7 +21,7 @@ width:100%;
     }
     .carroussel{
         margin:0 auto;
-        max-width:360px;
+        max-width:375px;
         padding:0.5rem;
         display:flex;
         overflow-x: auto;
