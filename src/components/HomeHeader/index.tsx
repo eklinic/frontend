@@ -4,11 +4,8 @@ import Link from 'next/link'
 import { Container } from './style'
 import Logo from '../../assets/logotipoEklinic.svg'
 import useWindowDimensions from '../../units/useWindowDimension'
-import SmothScroll from '../../services/smothscroll'
 
 const HomeMobileHeader: React.FC = () => {
-
-
 
     return (
         <Container>
@@ -21,30 +18,30 @@ const HomeMobileHeader: React.FC = () => {
 
                 <nav className="lateralConteiner">
                     <ul className="menu">
-                        <SmothScroll className="link" href="#inicio">
-                            <li>
+                        <Link href="/" scroll={false}>
+                            <li className="link">
                                 Início
                                 <div className="line" />
                             </li>
-                        </SmothScroll>
-                        <SmothScroll className="link" href="#quemSomos">
-                            <li>
+                        </Link>
+                        <Link href="#quemSomos" scroll={false}>
+                            <li className="link">
                                 Quem somos
                                 <div className="line" />
                             </li>
-                        </SmothScroll>
-                        <SmothScroll className="link" href="#conheca">
-                            <li>
+                        </Link>
+                        <Link href="#conheca" scroll={false}>
+                            <li className="link">
                                 Benefícios
                                 <div className="line" />
                             </li>
-                        </SmothScroll>
-                        <SmothScroll className="link" href="#comofunciona">
-                            <li>
+                        </Link>
+                        <Link href="#comofunciona" scroll={false}>
+                            <li className="link">
                                 Como funciona?
                                 <div className="line" />
                             </li>
-                        </SmothScroll>
+                        </Link>
 
 
                     </ul>

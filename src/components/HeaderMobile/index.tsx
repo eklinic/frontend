@@ -7,7 +7,7 @@ import Excluir from '../../assets/excluir.svg'
 import Logo from '../../assets/logotipoEklinic.svg'
 
 import Link from "next/link"
-import SmothScroll from "../../services/smothscroll"
+
 
 const HeaderMobile: React.FC = () => {
     const route = useRouter()
@@ -33,30 +33,31 @@ const HeaderMobile: React.FC = () => {
                 <ConteinerSubMenu>
                     <nav className="conteinerNav">
                         <ul className="menu">
-                            <SmothScroll className="menuItemNormal" href="#inicio">
-                                <li>
+
+                            <Link href="/" scroll={false}>
+                                <li className="menuItemNormal">
                                     Início
                                     <div className="line" />
                                 </li>
-                            </SmothScroll>
-                            <SmothScroll className="menuItemNormal" href="#quemSomos">
-                                <li>
+                            </Link>
+                            <Link href="#quemSomos" scroll={false}>
+                                <li className="menuItemNormal">
                                     Quem somos
                                     <div className="line" />
                                 </li>
-                            </SmothScroll>
-                            <SmothScroll className="menuItemNormal" href="#conheca">
-                                <li>
+                            </Link>
+                            <Link href="#conheca" scroll={false}>
+                                <li className="menuItemNormal">
                                     Benefícios
                                     <div className="line" />
                                 </li>
-                            </SmothScroll>
-                            <SmothScroll className="menuItemNormal" href="#comofunciona">
-                                <li>
+                            </Link>
+                            <Link href="#comofunciona" scroll={false}>
+                                <li className="menuItemNormal">
                                     Como funciona?
                                     <div className="line" />
                                 </li>
-                            </SmothScroll>
+                            </Link>
 
                         </ul>
                     </nav>
