@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                     />
                     <link rel="icon" href="https://strapi-imgs-eklinics.s3.sa-east-1.amazonaws.com/favicon_c599ec10d0.ico?updated_at=2022-04-06T16:03:20.570Z" />
-                    <title>Bem vindo a e.Klinic - Especialistas em compartilhamendo de clínicas e consultórios</title>
+
                 </Head>
                 <body>
                     <Main />
