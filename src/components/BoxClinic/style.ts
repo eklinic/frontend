@@ -3,15 +3,14 @@ import styled from 'styled-components'
 export const Container = styled.div`
  color: ${props => props.theme.colors.azulEscuro};
  box-shadow: 0px 0px 10px ${props => props.theme.colors.sombraCinza};
- max-width:97%;
-
+ width:97%;
  margin:0.5rem 0.5rem;
  display:flex;
  max-height:12rem;
  border-radius:10px;
 
  .images{
-     width:50%;
+     width:40%;
  }
 
  .details{
@@ -49,7 +48,7 @@ export const Container = styled.div`
 
         a{
             text-decoration:none;
-            font-size:80%;
+            font-size:90%;
             cursor:pointer;
 
             :hover{

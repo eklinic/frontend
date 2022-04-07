@@ -14,6 +14,7 @@ import WhatsApp from '../../assets/whatsapp.svg'
 import useWindowDimensions from '../../services/units'
 import HomeMobileHeader from '../../components/HeaderClinicaMobile'
 import Footer from '../../components/Footer'
+import Link from 'next/link'
 
 
 interface ClinicasProps {
@@ -84,13 +85,17 @@ const Office = () => {
                         <>
                             <div className="clinica">
                                 <div className="infosClinica">
+                                    <Link href='/clinicas'>
+                                        <a className='back'> Voltar </a>
+                                    </Link>
                                     <div className="infosTitle">
-                                        <TextChamada> C00{clinicas?.id}</TextChamada>
+                                        <TextChamada> Clínica C00{clinicas?.id}</TextChamada>
                                         {<TextAdj> {consultoriosQtde(clinicas.attributes?.offices.data.length)} {clinicas.attributes?.address_street} • {clinicas.attributes?.address_city}  </TextAdj>}
                                     </div>
                                     <div className="dadosClinica">
+                                        <h3>Informações da Clínica</h3>
                                         <div className="infosCaract">
-                                            <TextBasic>Funcionamento da Clínica</TextBasic>
+                                            <TextBasic>Funcionamento</TextBasic>
                                             <div className="infosCompl">
                                                 <div className="infosHoras">
                                                     <p>Abertura: <span>{clinicas.attributes?.start_time.substr(0, 5)}</span></p>

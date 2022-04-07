@@ -36,7 +36,7 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
             <div className="details">
                 <div className="textDescription">
                     <Link href={`/clinicas/${cliniId}`}>
-                        <TextChamada> {`C00${cliniId}`}</TextChamada>
+                        <TextChamada>Clínica {`C00${cliniId}`}</TextChamada>
                     </Link>
                     <TextAdj> {`${cliniRua} • `}  {`${cliniCidade} • `} {`${consultoriosQtde(cliniQtdeConsult)}`}</TextAdj>
                 </div>

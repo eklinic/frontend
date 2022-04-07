@@ -4,8 +4,9 @@ export const Container = styled.div`
 width:100%;
 
 .conteinerCarroussel{
-    margin:0 auto;
+    margin:auto auto;
     display:flex;
+    min-height:190px;
 
     .botao{
         margin:auto auto;
@@ -22,6 +23,7 @@ width:100%;
     .carroussel{
         margin:0 auto;
         max-width:375px;
+        min-width:375px;
         padding:1rem;
         display:flex;
         overflow-x: auto;
@@ -29,7 +31,17 @@ width:100%;
 
         @media(max-width:600px){
             max-width:90vw;
+            min-width:90vw;
         }
+
+        .semImagem{
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:${props => props.theme.colors.cinza};
+        }
+
         :-webkit-overflow-scrolling:touch;
 
         :-webkit-scrollbar{

@@ -21,14 +21,19 @@ const BoxCarrousselClinica = ({ refs }) => {
                     {'<'}
                 </button>
                 <div className='carroussel' ref={caroussel}>
-                {refs?.map(img =>
-
-                    <div className='departamento'>
-                        <div className='boxImage'>
-                            <img src={img.attributes.url} />
+                    {refs === null ?
+                        <div className="semImagem">
+                            <h4>**Clínica sem fotos disponíveis**</h4>
                         </div>
-                    </div>
-                    )}
+                        :
+                        refs.map(img =>
+
+                            <div className='departamento'>
+                                <div className='boxImage'>
+                                    <img src={img.attributes.url} />
+                                </div>
+                            </div>
+                        )}
 
 
                 </div>

@@ -24,11 +24,18 @@ export const Container = styled.div`
                 width:100%;
             }
 
+            .back{
+                margin-left:0.5rem;
+            }
+
             .infosTitle{
                 padding:0.8rem 0rem;
             }
 
             .dadosClinica{
+                h3{
+                    margin:0rem 0rem 0rem 0.250rem;
+                }
 
                 .infosCaract{
                     padding:0.75rem 0rem;

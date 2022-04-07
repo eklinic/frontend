@@ -30,7 +30,7 @@ const HomeContainerUm: React.FC = () => {
                                 <TextAdj>Como você nunca viu.</TextAdj>
 
                                 <div className="btnSaibaMais">
-                                    <Link href="/clinicas">
+                                    <Link href="#comofunciona">
                                         <button >CONHEÇA JÁ!</button>
                                     </Link>
                                 </div>
@@ -54,7 +54,7 @@ const HomeContainerUm: React.FC = () => {
                                 <TextAdj>Como você sempre sonhou.</TextAdj>
 
                                 <div className="btnSaibaMais">
-                                    <Link href="/clinicas">
+                                    <Link href="#comofunciona">
                                         <button >CONHEÇA JÁ!</button>
                                     </Link>
                                 </div>
