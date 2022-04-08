@@ -32,6 +32,7 @@
         "src/components/BoxCarroussel/style.js",
         "src/pages/clinicas/[office].tsx",
         "src/services/smothscroll.js",
+        "src/services/index.js",
     ],
     "exclude": [
         "node_modules"
