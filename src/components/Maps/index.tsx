@@ -26,7 +26,7 @@ const Maps = ({ clinics }) => {
         zoomControl: true,
     };
 
-    console.log(details)
+    console.log('mapa', Number(clinics[0].attributes.geo_coo.data.attributes.latitude))
 
     return (
         <Container>
@@ -46,7 +46,7 @@ const Maps = ({ clinics }) => {
                         return (
                             <>
                                 <Marker
-                                    position={{ lat: clinica.attributes.geo_coo.data.attributes.latitude, lng: clinica.attributes.geo_coo.data.attributes.longitude }}
+                                    position={{ lat: Number(clinica.attributes.geo_coo.data.attributes.latitude), lng: Number(clinica.attributes.geo_coo.data.attributes.longitude) }}
                                     onClick={() => { setDetails(clinica) }}
                                 />
                             </>
@@ -57,7 +57,7 @@ const Maps = ({ clinics }) => {
 
                     {details === null ?
                         null :
-                        (<InfoWindow position={{ lat: details.attributes.geo_coo.data.attributes.latitude, lng: details.attributes.geo_coo.data.attributes.longitude }} onCloseClick={() => { setDetails(null) }}>
+                        (<InfoWindow position={{ lat: Number(details.attributes.geo_coo.data.attributes.latitude), lng: Number(details.attributes.geo_coo.data.attributes.longitude) }} onCloseClick={() => { setDetails(null) }}>
                             <div className='ConteinerJanela'>
                                 <img src={details.attributes.clinic_perfil.data.attributes.formats.small.url} className="perfil" />
                                 <Link href={`/clinicas/${details.id}`}>
