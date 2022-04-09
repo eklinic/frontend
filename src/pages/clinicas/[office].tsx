@@ -63,7 +63,7 @@ const Office = () => {
     }
 
     const offices = clinicas.attributes?.offices.data
-    console.log(offices)
+    console.log('consult', offices)
 
     const sendMensage = (consultorio) => {
         const tirandoespaco = consultorio.replace(" ", "+")
@@ -88,6 +88,7 @@ const Office = () => {
                                     <Link href='/clinicas'>
                                         <a className='back'> Voltar </a>
                                     </Link>
+
                                     <div className="infosTitle">
                                         <TextChamada> Clínica C00{clinicas?.id}</TextChamada>
                                         {<TextAdj> {consultoriosQtde(clinicas.attributes?.offices.data.length)} {clinicas.attributes?.address_street} • {clinicas.attributes?.address_city}  </TextAdj>}
@@ -160,7 +161,7 @@ const Office = () => {
                                             </div>
                                             <div className="infosConsult">
                                                 <div className="boxConsultorios">
-                                                    <BoxCarrousselConsultorio refs={"."} />
+                                                    <BoxCarrousselConsultorio refs={consultorio.id} />
                                                 </div>
                                                 <div className="details">
                                                     <div className="caract">

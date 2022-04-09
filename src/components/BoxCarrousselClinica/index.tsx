@@ -14,6 +14,7 @@ const BoxCarrousselClinica = ({ refs }) => {
         caroussel.current.scrollLeft += caroussel.current.offsetWidth
     }
 
+
     return (
         <Container>
             <div className='conteinerCarroussel'>
@@ -21,12 +22,12 @@ const BoxCarrousselClinica = ({ refs }) => {
                     {'<'}
                 </button>
                 <div className='carroussel' ref={caroussel}>
-                    {refs === null ?
+                    {refs === null || undefined ?
                         <div className="semImagem">
                             <h4>**Clínica sem fotos disponíveis**</h4>
                         </div>
                         :
-                        refs.map(img =>
+                        refs?.map(img =>
 
                             <div className='departamento'>
                                 <div className='boxImage'>

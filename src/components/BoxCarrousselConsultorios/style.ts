@@ -55,6 +55,15 @@ width:100%;
             }
         }
 
+        .semImagem{
+            min-width: 360px;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:${props => props.theme.colors.cinza};
+        }
+
         ::-webkit-scrollbar {
             width: 5px;
         }
