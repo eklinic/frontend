@@ -26,7 +26,7 @@ const Maps = ({ clinics }) => {
         zoomControl: true,
     };
 
-    console.log('mapa', Number(clinics[0].attributes.geo_coo.data.attributes.latitude))
+
 
     return (
         <Container>
@@ -42,7 +42,7 @@ const Maps = ({ clinics }) => {
 
                 >
                     {clinics.map(clinica => {
-                        console.log(clinica)
+
                         return (
                             <>
                                 <Marker
