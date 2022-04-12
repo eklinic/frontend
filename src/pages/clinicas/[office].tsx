@@ -150,93 +150,101 @@ const Office = () => {
                                 <div className="consultorios">
 
                                     {offices?.map(consultorio =>
-                                        <div className="consult">
-                                            <div className="title">
-                                                <TextAdj>{consultorio.attributes.office_name}</TextAdj>
-                                                <div className="priceBox">
-                                                    <p>R$/avulsa:<span>{consultorio.attributes.office_price_unit}</span>/hora</p>
-                                                    <p>R$/período:<span>{consultorio.attributes.office_price_period}</span>/hora</p>
-                                                    <p>R$/dia:<span>{consultorio.attributes.office_price_days}</span>/hora</p>
+                                        <>
+                                            <div className="consult">
+                                                <div className="title">
+                                                    <TextAdj>{consultorio.attributes.office_name}</TextAdj>
+                                                    <div className="priceBox">
+                                                        <p>R$/avulsa:<span>{consultorio.attributes.office_price_unit}</span>/hora</p>
+                                                        <p>R$/período:<span>{consultorio.attributes.office_price_period}</span>/hora</p>
+                                                        <p>R$/dia:<span>{consultorio.attributes.office_price_days}</span>/hora</p>
+                                                    </div>
+                                                </div>
+                                                <div className="infosConsult">
+                                                    <div className="boxConsultorios">
+                                                        <BoxCarrousselConsultorio refs={consultorio.id} />
+                                                    </div>
+                                                    <div className="details">
+                                                        <div className="caract">
+                                                            {consultorio.attributes?.office_characteristics.items.map(caract => <p>{caract}</p>)}
+
+                                                        </div>
+                                                        <div className="profs">
+                                                            <p className={consultorio.attributes?.office_profissionals.medicina === true ? 'true' : 'false'}>Medicos</p>
+                                                            <p className={consultorio.attributes?.office_profissionals.fisioterapia === true ? 'true' : 'false'}>Fisioterapeutas</p>
+                                                            <p className={consultorio.attributes?.office_profissionals.psicologo === true ? 'true' : 'false'}>Psicólogos</p>
+                                                            <p className={consultorio.attributes?.office_profissionals.nutricao === true ? 'true' : 'false'}>Nutricionistas</p>
+                                                            <p className={consultorio.attributes?.office_profissionals.fono === true ? 'true' : 'false'}>Fonoaudiologos</p>
+                                                            <p className={consultorio.attributes?.office_profissionals.edFisico === true ? 'true' : 'false'}>Ed. Físicos </p>
+                                                            <p className={consultorio.attributes?.office_profissionals.farmacia === true ? 'true' : 'false'}>Farmaceuticos</p>
+                                                            <p className={consultorio.attributes?.office_profissionals.biomed === true ? 'true' : 'false'}>Biomédicos</p>
+                                                        </div>
+                                                        {consultorio.attributes.url_calendario === null || undefined ?
+                                                            <div className="disponibilidade">
+                                                                <div className="dia">
+                                                                    <TitleDay>SEG</TitleDay>
+                                                                    {consultorio.attributes?.office_availability.segunda === null ?
+                                                                        <p>-</p>
+                                                                        :
+                                                                        <p>{consultorio.attributes?.office_availability.segunda[0]} as {consultorio.attributes?.office_availability.segunda[1]}</p>
+                                                                    }
+
+                                                                </div>
+                                                                <div className="dia">
+                                                                    <TitleDay>TER</TitleDay>
+                                                                    {consultorio.attributes?.office_availability.terça === null ?
+                                                                        <p>-</p>
+                                                                        :
+                                                                        <p>{consultorio.attributes?.office_availability.terça[0]} as {consultorio.attributes?.office_availability.terça[1]}</p>
+                                                                    }
+                                                                </div>
+                                                                <div className="dia">
+                                                                    <TitleDay>QUA</TitleDay>
+                                                                    {consultorio.attributes?.office_availability.quarta === null ?
+                                                                        <p>-</p>
+                                                                        :
+                                                                        <p>{consultorio.attributes?.office_availability.quarta[0]} as {consultorio.attributes?.office_availability.quarta[1]}</p>
+                                                                    }
+                                                                </div>
+                                                                <div className="dia">
+                                                                    <TitleDay>QUI</TitleDay>
+                                                                    {consultorio.attributes?.office_availability.quinta === null ?
+                                                                        <p>-</p>
+                                                                        :
+                                                                        <p>{consultorio.attributes?.office_availability.quinta[0]} as {consultorio.attributes?.office_availability.quinta[1]}</p>
+                                                                    }
+                                                                </div>
+                                                                <div className="dia">
+                                                                    <TitleDay>SEX</TitleDay>
+                                                                    {consultorio.attributes?.office_availability.sexta === null ?
+                                                                        <p>-</p>
+                                                                        :
+                                                                        <p>{consultorio.attributes?.office_availability.sexta[0]} as {consultorio.attributes?.office_availability.sexta[1]}</p>
+                                                                    }
+                                                                </div>
+                                                                <div className="dia">
+                                                                    <TitleDay>SAB</TitleDay>
+                                                                    {consultorio.attributes?.office_availability.sabado === null ?
+                                                                        <p>-</p>
+                                                                        :
+                                                                        <p>{consultorio.attributes?.office_availability.sabado[0]} as {consultorio.attributes?.office_availability.sabado[1]}</p>
+                                                                    }
+                                                                </div>
+                                                            </div> : null}
+                                                        <div className="boxbtn">
+                                                            <button onClick={() => sendMensage(consultorio.attributes.office_name)}>RESERVAR <WhatsApp /></button>
+                                                        </div>
+                                                    </div>
+                                                    <div className="traco" style={{ height: '30vh' }} />
                                                 </div>
                                             </div>
-                                            <div className="infosConsult">
-                                                <div className="boxConsultorios">
-                                                    <BoxCarrousselConsultorio refs={consultorio.id} />
+                                            {consultorio.attributes.url_calendario === null || undefined ? null : <div className="agenda">
+                                                <div className="title">
+                                                    <TextAdj>Agenda {consultorio.attributes.office_name}</TextAdj>
+                                                    <iframe src={consultorio.attributes.url_calendario} className="agendaGoogle" scrolling="yes"></iframe>
                                                 </div>
-                                                <div className="details">
-                                                    <div className="caract">
-                                                        {consultorio.attributes?.office_characteristics.items.map(caract => <p>{caract}</p>)}
-
-                                                    </div>
-                                                    <div className="profs">
-                                                        <p className={consultorio.attributes?.office_profissionals.medicina === true ? 'true' : 'false'}>Medicos</p>
-                                                        <p className={consultorio.attributes?.office_profissionals.fisioterapia === true ? 'true' : 'false'}>Fisioterapeutas</p>
-                                                        <p className={consultorio.attributes?.office_profissionals.psicologo === true ? 'true' : 'false'}>Psicólogos</p>
-                                                        <p className={consultorio.attributes?.office_profissionals.nutricao === true ? 'true' : 'false'}>Nutricionistas</p>
-                                                        <p className={consultorio.attributes?.office_profissionals.fono === true ? 'true' : 'false'}>Fonoaudiologos</p>
-                                                        <p className={consultorio.attributes?.office_profissionals.edFisico === true ? 'true' : 'false'}>Ed. Físicos </p>
-                                                        <p className={consultorio.attributes?.office_profissionals.farmacia === true ? 'true' : 'false'}>Farmaceuticos</p>
-                                                        <p className={consultorio.attributes?.office_profissionals.biomed === true ? 'true' : 'false'}>Biomédicos</p>
-                                                    </div>
-                                                    <div className="disponibilidade">
-                                                        <div className="dia">
-                                                            <TitleDay>SEG</TitleDay>
-                                                            {consultorio.attributes?.office_availability.segunda === null ?
-                                                                <p>-</p>
-                                                                :
-                                                                <p>{consultorio.attributes?.office_availability.segunda[0]} as {consultorio.attributes?.office_availability.segunda[1]}</p>
-                                                            }
-
-                                                        </div>
-                                                        <div className="dia">
-                                                            <TitleDay>TER</TitleDay>
-                                                            {consultorio.attributes?.office_availability.terça === null ?
-                                                                <p>-</p>
-                                                                :
-                                                                <p>{consultorio.attributes?.office_availability.terça[0]} as {consultorio.attributes?.office_availability.terça[1]}</p>
-                                                            }
-                                                        </div>
-                                                        <div className="dia">
-                                                            <TitleDay>QUA</TitleDay>
-                                                            {consultorio.attributes?.office_availability.quarta === null ?
-                                                                <p>-</p>
-                                                                :
-                                                                <p>{consultorio.attributes?.office_availability.quarta[0]} as {consultorio.attributes?.office_availability.quarta[1]}</p>
-                                                            }
-                                                        </div>
-                                                        <div className="dia">
-                                                            <TitleDay>QUI</TitleDay>
-                                                            {consultorio.attributes?.office_availability.quinta === null ?
-                                                                <p>-</p>
-                                                                :
-                                                                <p>{consultorio.attributes?.office_availability.quinta[0]} as {consultorio.attributes?.office_availability.quinta[1]}</p>
-                                                            }
-                                                        </div>
-                                                        <div className="dia">
-                                                            <TitleDay>SEX</TitleDay>
-                                                            {consultorio.attributes?.office_availability.sexta === null ?
-                                                                <p>-</p>
-                                                                :
-                                                                <p>{consultorio.attributes?.office_availability.sexta[0]} as {consultorio.attributes?.office_availability.sexta[1]}</p>
-                                                            }
-                                                        </div>
-                                                        <div className="dia">
-                                                            <TitleDay>SAB</TitleDay>
-                                                            {consultorio.attributes?.office_availability.sabado === null ?
-                                                                <p>-</p>
-                                                                :
-                                                                <p>{consultorio.attributes?.office_availability.sabado[0]} as {consultorio.attributes?.office_availability.sabado[1]}</p>
-                                                            }
-                                                        </div>
-
-                                                    </div>
-                                                    <div className="boxbtn">
-                                                        <button onClick={() => sendMensage(consultorio.attributes.office_name)}>RESERVAR <WhatsApp /></button>
-                                                    </div>
-                                                </div>
-                                                <div className="traco" style={{ height: '30vh' }} />
-                                            </div>
-                                        </div>)}
+                                            </div>}
+                                        </>)}
 
                                 </div>
                             </div>

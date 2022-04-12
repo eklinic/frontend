@@ -163,170 +163,194 @@ export const Container = styled.div`
 
     .descritivo{
         padding:1rem 0rem;
+
         .consultorios{
             display:flex;
             flex-wrap:wrap;
-        }
 
-        .consult{
-            padding:1rem 0rem 0rem 0rem;
-            width:50%;
 
-            @media(max-width:600px){
-                width:100%;
-            }
-
-            .title{
-                display:flex;
-                justify-content:space-between;
+            .consult{
+                padding:1rem 0rem 0rem 0rem;
+                width:50%;
 
                 @media(max-width:600px){
-                        flex-wrap:wrap;
-                    }
-
-                .priceBox{
-                    display:flex;
-                    justify-content:space-between;
-                    margin:0rem 1rem;
-                    width:60%;
-                    display:flex;
-
-                    @media(max-width:600px){
-                        padding:1rem 0rem;
-                        width:100%;
-                    }
-
-                    p{
-                        margin-right:0.5rem;
-                    }
-
-                    span{
-                        font-size:150%;
-                        font-weight:700;
-                        padding-left:0.125rem;
-                    }
-                }
-            }
-
-            :nth-child(odd){
-                .traco{
-                    display:flex;
-
-                    @media(max-width:600px){
-                        display:none;
-                    }
-                }
-            }
-
-            .infosConsult{
-                display:flex;
-                justify-content:space-between;
-                align-items:center;
-
-                @media(max-width:600px){
-                    flex-wrap:wrap;
-                }
-
-                .details{
-                    height:20rem;
                     width:100%;
+                }
+
+                .title{
                     display:flex;
-                    flex-direction:column;
-                    align-items:center;
                     justify-content:space-between;
 
                     @media(max-width:600px){
-                        height:100%;
-                    }
+                            flex-wrap:wrap;
+                        }
 
-                    .caract{
+                    .priceBox{
                         display:flex;
-                        flex-wrap:wrap;
-                        justify-content:center;
+                        justify-content:space-between;
+                        margin:0rem 1rem;
+                        width:60%;
+                        display:flex;
+
+                        @media(max-width:600px){
+                            padding:1rem 0rem;
+                            width:100%;
+                        }
 
                         p{
-                            margin:0.3rem;
+                            margin-right:0.5rem;
+                        }
+
+                        span{
+                            font-size:150%;
+                            font-weight:700;
+                            padding-left:0.125rem;
+                        }
+                    }
+                }
+
+                :nth-child(odd){
+                    .traco{
+                        display:flex;
+
+                        @media(max-width:600px){
+                            display:none;
+                        }
+                    }
+                }
+
+                .infosConsult{
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+
+                    @media(max-width:600px){
+                        flex-wrap:wrap;
+                    }
+
+                    .details{
+                        height:20rem;
+                        width:100%;
+                        display:flex;
+                        flex-direction:column;
+                        align-items:center;
+                        justify-content:space-between;
+
+                        @media(max-width:600px){
+                            height:100%;
+                        }
+
+                        .caract{
+                            display:flex;
+                            flex-wrap:wrap;
+                            justify-content:center;
+
+                            p{
+                                margin:0.3rem;
+
+                                @media(max-width:600px){
+                                    margin:1rem;
+                                }
+                            }
+                        }
+
+                        .disponibilidade{
+                            display:flex;
+                            max-width:100%;
+                            flex-wrap:wrap;
+                            justify-content:center;
+
+                            .dia{
+                                border:1px solid black;
+                                width:3.5rem;
+                                text-align:center;
+                                border-radius:5px;
+                                padding:0.125rem;
+                            }
 
                             @media(max-width:600px){
                                 margin:1rem;
                             }
                         }
-                    }
 
-                    .disponibilidade{
-                        display:flex;
-                        max-width:100%;
-                        flex-wrap:wrap;
-                        justify-content:center;
+                        .boxbtn{
+                            display: flex;
+                            justify-content:center;
 
-                        .dia{
-                            border:1px solid black;
-                            width:3.5rem;
-                            text-align:center;
-                            border-radius:5px;
-                            padding:0.125rem;
+                            button{
+                                width:10rem;
+                                border:none;
+                                display:flex;
+                                padding:0.5rem;
+                                justify-content:space-evenly;
+                                align-items:center;
+                                border-radius:5px;
+                                cursor:pointer;
+                                background:${props => props.theme.colors.azulModerado};
+                                color:#ffffff;
+                                font-size:120%;
+
+                                @media(max-width:600px){
+                                    margin:0rem 0rem 1rem 0rem;
+                                }
+
+
+                                :hover{
+                                    background:${props => props.theme.colors.azulEscuro};
+                                    font-weight:700;
+                                }
+                            }
                         }
 
-                        @media(max-width:600px){
-                            margin:1rem;
-                        }
-                    }
-
-                    .boxbtn{
-                        display: flex;
-                        justify-content:center;
-
-                        button{
-                            width:10rem;
-                            border:none;
+                        .profs{
                             display:flex;
-                            padding:0.5rem;
-                            justify-content:space-evenly;
-                            align-items:center;
-                            border-radius:5px;
-                            cursor:pointer;
-                            background:${props => props.theme.colors.azulModerado};
-                            color:#ffffff;
-                            font-size:120%;
+                            max-width:100%;
+                            flex-wrap:wrap;
+                            justify-content:space-around;
 
-                            @media(max-width:600px){
-                                margin:0rem 0rem 1rem 0rem;
+                            p{
+                                margin:0.125rem;
+                                padding: 0.25rem;
+                                color:${props => props.theme.colors.cinza};
                             }
 
-
-                            :hover{
+                            .true{
                                 background:${props => props.theme.colors.azulEscuro};
-                                font-weight:700;
+                                color:${props => props.theme.colors.branco};
+                            }
+
+                            .traco{
+                                display:none;
+                                padding: 0rem 0rem 0rem 0.25rem;
                             }
                         }
+
                     }
-
-                    .profs{
-                        display:flex;
-                        max-width:100%;
-                        flex-wrap:wrap;
-                        justify-content:space-around;
-
-                        p{
-                            margin:0.125rem;
-                            padding: 0.25rem;
-                            color:${props => props.theme.colors.cinza};
-                        }
-
-                        .true{
-                            background:${props => props.theme.colors.azulEscuro};
-                            color:${props => props.theme.colors.branco};
-                        }
-
-                        .traco{
-                            display:none;
-                            padding: 0rem 0rem 0rem 0.25rem;
-                        }
-                    }
-
                 }
+
             }
 
+            .agenda{
+                padding:1rem 0rem 0rem 0rem;
+                width:50%;
+                height:20rem;
+
+                @media(max-width:600px){
+                    width:100%;
+                    height:25rem;
+                }
+
+                .agendaGoogle{
+                    width:100%;
+                    height:19rem;
+                    border:none;
+
+                    @media(max-width:600px){
+                    width:100%;
+                    height:22rem;
+                    }
+                }
+            }
         }
     }
 
