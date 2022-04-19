@@ -63,7 +63,6 @@ const Office = () => {
     }
 
     const offices = clinicas.attributes?.offices.data
-    console.log('consult', offices)
 
     const sendMensage = (consultorio) => {
         const tirandoespaco = consultorio.replace(" ", "+")
@@ -104,13 +103,7 @@ const Office = () => {
                                                 </div>
                                                 <div className="traco" />
                                                 <div className="infosDias">
-                                                    <p className={clinicas.attributes?.days_open.segunda === true ? 'true' : 'false'}>Segunda-feira</p>
-                                                    <p className={clinicas.attributes?.days_open.terça === true ? 'true' : 'false'}>Terça-feira</p>
-                                                    <p className={clinicas.attributes?.days_open.quarta === true ? 'true' : 'false'}>Quarta-feira</p>
-                                                    <p className={clinicas.attributes?.days_open.quinta === true ? 'true' : 'false'}>Quinta-feira</p>
-                                                    <p className={clinicas.attributes?.days_open.sexta === true ? 'true' : 'false'}>Sexta-feira</p>
-                                                    <p className={clinicas.attributes?.days_open.sabado === true ? 'true' : 'false'}>Sábado</p>
-                                                    <p className={clinicas.attributes?.days_open.domingo === true ? 'true' : 'false'}>Domingo</p>
+                                                    {clinicas.attributes?.days_open.days.map(dia => <p className='true'>{dia}</p>)}
                                                 </div>
                                             </div>
                                         </div>
@@ -126,14 +119,7 @@ const Office = () => {
                                                 <div className="infosProfs">
                                                     <TextBasic>Disponível para</TextBasic>
                                                     <div className="profs">
-                                                        <p className={clinicas.attributes?.clinic_profissionals.medicina === true ? 'true' : 'false'}>Medicos</p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.fisioterapia === true ? 'true' : 'false'}>Fisioterapeutas</p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.psicologo === true ? 'true' : 'false'}>Psicólogos</p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.nutricao === true ? 'true' : 'false'}>Nutricionistas</p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.fono === true ? 'true' : 'false'}>Fonoaudiologos</p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.edFisico === true ? 'true' : 'false'}>Ed. Físicos </p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.farmacia === true ? 'true' : 'false'}>Farmaceuticos</p>
-                                                        <p className={clinicas.attributes?.clinic_profissionals.biomed === true ? 'true' : 'false'}>Biomédicos</p>
+                                                        {clinicas.attributes?.clinic_profissionals.profissionals.map(prof => <p className='true'>{prof}</p>)}
                                                     </div>
                                                 </div>
                                             </div>
@@ -170,66 +156,19 @@ const Office = () => {
 
                                                         </div>
                                                         <div className="profs">
-                                                            <p className={consultorio.attributes?.office_profissionals.medicina === true ? 'true' : 'false'}>Medicos</p>
-                                                            <p className={consultorio.attributes?.office_profissionals.fisioterapia === true ? 'true' : 'false'}>Fisioterapeutas</p>
-                                                            <p className={consultorio.attributes?.office_profissionals.psicologo === true ? 'true' : 'false'}>Psicólogos</p>
-                                                            <p className={consultorio.attributes?.office_profissionals.nutricao === true ? 'true' : 'false'}>Nutricionistas</p>
-                                                            <p className={consultorio.attributes?.office_profissionals.fono === true ? 'true' : 'false'}>Fonoaudiologos</p>
-                                                            <p className={consultorio.attributes?.office_profissionals.edFisico === true ? 'true' : 'false'}>Ed. Físicos </p>
-                                                            <p className={consultorio.attributes?.office_profissionals.farmacia === true ? 'true' : 'false'}>Farmaceuticos</p>
-                                                            <p className={consultorio.attributes?.office_profissionals.biomed === true ? 'true' : 'false'}>Biomédicos</p>
+                                                            {consultorio.attributes?.office_profissionals.profissionals.map(prof => <p className="true">{prof}</p>)}
                                                         </div>
                                                         {consultorio.attributes.url_calendario === null || undefined ?
                                                             <div className="disponibilidade">
-                                                                <div className="dia">
-                                                                    <TitleDay>SEG</TitleDay>
-                                                                    {consultorio.attributes?.office_availability.segunda === null ?
-                                                                        <p>-</p>
-                                                                        :
-                                                                        <p>{consultorio.attributes?.office_availability.segunda[0]} as {consultorio.attributes?.office_availability.segunda[1]}</p>
-                                                                    }
+                                                                {consultorio.attributes?.office_availability.days.map(day =>
+                                                                    <div className="dia">
+                                                                        <TitleDay>{day.name}</TitleDay>
+                                                                        <p>
+                                                                            {day.inicial} as {day.final}
+                                                                        </p>
+                                                                    </div>
+                                                                )}
 
-                                                                </div>
-                                                                <div className="dia">
-                                                                    <TitleDay>TER</TitleDay>
-                                                                    {consultorio.attributes?.office_availability.terça === null ?
-                                                                        <p>-</p>
-                                                                        :
-                                                                        <p>{consultorio.attributes?.office_availability.terça[0]} as {consultorio.attributes?.office_availability.terça[1]}</p>
-                                                                    }
-                                                                </div>
-                                                                <div className="dia">
-                                                                    <TitleDay>QUA</TitleDay>
-                                                                    {consultorio.attributes?.office_availability.quarta === null ?
-                                                                        <p>-</p>
-                                                                        :
-                                                                        <p>{consultorio.attributes?.office_availability.quarta[0]} as {consultorio.attributes?.office_availability.quarta[1]}</p>
-                                                                    }
-                                                                </div>
-                                                                <div className="dia">
-                                                                    <TitleDay>QUI</TitleDay>
-                                                                    {consultorio.attributes?.office_availability.quinta === null ?
-                                                                        <p>-</p>
-                                                                        :
-                                                                        <p>{consultorio.attributes?.office_availability.quinta[0]} as {consultorio.attributes?.office_availability.quinta[1]}</p>
-                                                                    }
-                                                                </div>
-                                                                <div className="dia">
-                                                                    <TitleDay>SEX</TitleDay>
-                                                                    {consultorio.attributes?.office_availability.sexta === null ?
-                                                                        <p>-</p>
-                                                                        :
-                                                                        <p>{consultorio.attributes?.office_availability.sexta[0]} as {consultorio.attributes?.office_availability.sexta[1]}</p>
-                                                                    }
-                                                                </div>
-                                                                <div className="dia">
-                                                                    <TitleDay>SAB</TitleDay>
-                                                                    {consultorio.attributes?.office_availability.sabado === null ?
-                                                                        <p>-</p>
-                                                                        :
-                                                                        <p>{consultorio.attributes?.office_availability.sabado[0]} as {consultorio.attributes?.office_availability.sabado[1]}</p>
-                                                                    }
-                                                                </div>
                                                             </div> : null}
                                                         <div className="boxbtn">
                                                             <button onClick={() => sendMensage(consultorio.attributes.office_name)}>RESERVAR <WhatsApp /></button>

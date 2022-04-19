@@ -97,7 +97,8 @@ export const Container = styled.div`
                             .profs{
                                 max-width:100%;
                                 display:flex;
-                                flex-direction:column;
+
+                                justify-content:center;
                                 flex-wrap:wrap;
                                 max-height:5rem;
 
@@ -162,7 +163,7 @@ export const Container = styled.div`
     }
 
     .descritivo{
-        padding:1rem 0rem;
+        padding:2.5rem 0rem;
 
         .consultorios{
             display:flex;
@@ -213,7 +214,7 @@ export const Container = styled.div`
                     .traco{
                         display:flex;
 
-                        @media(max-width:600px){
+                        @media(max-width:700px){
                             display:none;
                         }
                     }
@@ -363,6 +364,7 @@ export const Container = styled.div`
         @media(max-width:600px){
             border-bottom:1px solid ${props => props.theme.colors.cinza};
             border-left:none;
+            display:none;
         }
     }
 

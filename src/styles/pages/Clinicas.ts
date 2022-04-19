@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  max-height: 100vh;
-  max-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   color:#ffffff;
 
   .conteudo{
@@ -41,6 +41,7 @@ export const Centralizer = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  min-height: 90.8vh;
   height:100%;
   text-align:right;
   font-size:12px;

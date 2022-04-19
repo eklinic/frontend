@@ -10,6 +10,7 @@ import BoxClinic from '../../components/BoxClinic'
 import Loader from '../../components/Loader'
 import useWindowDimensions from '../../services/units'
 import HomeMobileHeader from '../../components/HeaderClinicaMobile'
+import Footer from '../../components/Footer'
 
 
 
@@ -79,7 +80,7 @@ const Clinicas = () => {
 
 
                 </Centralizer>
-
+                <Footer />
 
 
 
