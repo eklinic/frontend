@@ -19,8 +19,6 @@ const Clinicas = () => {
     const [load, setLoad] = useState(true)
     const { width } = useWindowDimensions()
 
-    console.log(clinicas)
-
     useEffect(() => {
 
 
