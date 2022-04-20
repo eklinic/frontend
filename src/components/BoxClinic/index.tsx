@@ -13,7 +13,7 @@ import { ClinicaAtributteProps } from '../../services/services'
 import BoxCarroussel from '../BoxCarroussel'
 
 
-const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, cliniDispoMedicos, cliniDispoNutricao, cliniDispoPsico, cliniDispoFisio, cliniPreco, urlImage }) => {
+const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, cliniDispo, cliniPreco, urlImage }) => {
 
     function consultoriosQtde(qtde) {
         if (qtde > 0) {
@@ -44,18 +44,9 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
                 <div className="conteinerCaract">
                     <div className="caracteristicas">
                         <TextAdj> Disponível para: </TextAdj>
-                        {
-                            cliniDispoMedicos === true ? <h4>Medicos</h4> : null
-                        }
-                        {
-                            cliniDispoNutricao === true ? <h4>Nutricionistas</h4> : null
-                        }
-                        {
-                            cliniDispoPsico === true ? <h4>Psicologos</h4> : null
-                        }
-                        {
-                            cliniDispoFisio === true ? <h4>Fisioterapeutas</h4> : null
-                        }
+                        {cliniDispo.map(prof => <h4>{prof}</h4>)}
+
+
 
                     </div>
                     <div className="containerPrice">

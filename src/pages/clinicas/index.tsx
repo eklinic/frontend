@@ -19,6 +19,8 @@ const Clinicas = () => {
     const [load, setLoad] = useState(true)
     const { width } = useWindowDimensions()
 
+    console.log(clinicas)
+
     useEffect(() => {
 
 
@@ -61,10 +63,7 @@ const Clinicas = () => {
                                             cliniRua={clinica.attributes?.address_street}
                                             cliniCidade={clinica.attributes?.address_city}
                                             cliniQtdeConsult={clinica.attributes?.offices.data.length}
-                                            cliniDispoMedicos={clinica.attributes?.clinic_profissionals.medicina}
-                                            cliniDispoNutricao={clinica.attributes?.clinic_profissionals.nutricao}
-                                            cliniDispoPsico={clinica.attributes?.clinic_profissionals.psicologo}
-                                            cliniDispoFisio={clinica.attributes?.clinic_profissionals.fisioterapia}
+                                            cliniDispo={clinica.attributes?.clinic_profissionals.profissionals}
                                             cliniPreco={clinica.attributes?.offices.data[0].attributes.office_price_days}
                                         />
                                     )}
