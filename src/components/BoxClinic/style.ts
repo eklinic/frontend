@@ -6,7 +6,7 @@ export const Container = styled.div`
  width:97%;
  margin:0.5rem 0.5rem;
  display:flex;
- max-height:12rem;
+ max-height:14rem;
  border-radius:10px;
 
  .images{

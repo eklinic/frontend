@@ -27,6 +27,7 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
         }
     }
 
+
     return (
         <Container>
             <div className="images">
@@ -45,6 +46,7 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
                     <div className="caracteristicas">
                         <TextAdj> Disponível para: </TextAdj>
                         {cliniDispo.map(prof => <h4>{prof}</h4>)}
+
 
 
 
