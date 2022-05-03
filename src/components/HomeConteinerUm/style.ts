@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   margin: auto auto;
+  height:100%;
 
   .divisor {
     width: 50%;
@@ -114,7 +115,7 @@ export const Centralizer = styled.div`
 `
 export const TextChamada = styled.h1`
   font-size: 40px;
-  width: 80%;
+  width: 90%;
   text-align: left;
 
   @media(max-width:600px){

@@ -45,9 +45,17 @@ const BoxClinic = ({ key, cliniId, cliniRua, cliniCidade, cliniQtdeConsult, clin
                 <div className="conteinerCaract">
                     <div className="caracteristicas">
                         <TextAdj> Disponível para: </TextAdj>
-                        {cliniDispo.map(prof => <h4>{prof}</h4>)}
-
-
+                        {cliniDispo.length > 5 ?
+                            <>
+                                <h4>
+                                    Multiplos
+                                </h4>
+                                <Link href={`/clinicas/${cliniId}`}>
+                                    <h6>Conferir </h6>
+                                </Link>
+                            </>
+                            :
+                            cliniDispo.map(prof => <h4>{prof}</h4>)}
 
 
                     </div>

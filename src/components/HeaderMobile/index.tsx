@@ -64,7 +64,7 @@ const HeaderMobile: React.FC = () => {
 
                     <ul className="conteinerButtons">
                         <Link href='/clinicas'>
-                            <button className="btnIr">RESERVAR JÁ</button>
+                            <button className="btnIr">Reservar Já!</button>
                         </Link>
                     </ul>
                 </ConteinerSubMenu> : null}

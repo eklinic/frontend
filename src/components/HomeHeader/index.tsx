@@ -47,7 +47,7 @@ const HomeMobileHeader: React.FC = () => {
                     </ul>
                     <div className="btnsContainer">
                         <Link href='/clinicas'>
-                            <button className="btnIr">RESERVAR JÁ</button>
+                            <button className="btnIr">Reservar Já!</button>
                         </Link>
                     </div>
                 </nav>

@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   margin: auto auto;
-  height: 24rem;
+  height: 100%;
   padding: 1rem 0rem;
   max-width: 100%;
   background: ${props => props.theme.colors.backgroundCinza};
 
     @media(max-width:600px){
-    height: 45rem;
+    height: 100%;
     display: flex;
     justify-content:space-between;
     align-items:center;
@@ -16,7 +16,7 @@ export const Container = styled.div`
     }
 
     .containerCitacao {
-        height: 20rem;
+        height: 100%;
         display: flex;
         align-items: center;
 
@@ -57,7 +57,6 @@ export const Container = styled.div`
                 background: ${props => props.theme.colors.azulEscuro};
                 padding: 0.4rem 5rem;
                 color: ${props => props.theme.colors.branco};
-                font-weight: 700;
                 cursor:pointer;
                 }
             }
@@ -95,7 +94,7 @@ export const TextAdj = styled.p`
 `
 
 export const TextBasic = styled.p`
-  font-size: 20px;
+  font-size: 16px;
 
   text-align: center;
   color: ${props => props.theme.colors.cinza};

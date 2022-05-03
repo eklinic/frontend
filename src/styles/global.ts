@@ -14,6 +14,10 @@ export default createGlobalStyle`
   }
 
   body {
-    font: 400 16px Roboto, sans-serif;
+    font: 400 14px Poppins, sans-serif;
+  }
+
+  button{
+    font: 400 16px Poppins, sans-serif;
   }
 `

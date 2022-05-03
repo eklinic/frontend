@@ -21,7 +21,7 @@ const HomeContainerTres: React.FC = () => {
             <Centralizer>
                 <div className="conteinerConteudo">
                     <div className="conteinerChamada">
-                        <TextChamada>DUVIDAS?</TextChamada>
+                        <TextChamada>DÚVIDAS?</TextChamada>
 
                         <p>Entre em contato com nosso atendimento:</p>
                     </div>

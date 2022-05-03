@@ -47,6 +47,9 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
                         rel="stylesheet"
                     />
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+
+
                     <link rel="icon" href="https://strapi-imgs-eklinics.s3.sa-east-1.amazonaws.com/favicon_c599ec10d0.ico?updated_at=2022-04-06T16:03:20.570Z" />
 
                 </Head>

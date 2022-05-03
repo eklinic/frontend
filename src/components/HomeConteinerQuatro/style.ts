@@ -34,7 +34,7 @@ export const Container = styled.div`
     }
 
       h3 {
-        width: 30%;
+        width: 40%;
       }
 
       .vetor {

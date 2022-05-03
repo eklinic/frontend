@@ -31,7 +31,7 @@ const HomeContainerUm: React.FC = () => {
 
                                 <div className="btnSaibaMais">
                                     <Link href="#comofunciona">
-                                        <button >CONHEÇA JÁ!</button>
+                                        <button>Saiba Mais</button>
                                     </Link>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ const HomeContainerUm: React.FC = () => {
 
                                 <div className="btnSaibaMais">
                                     <Link href="#comofunciona">
-                                        <button >CONHEÇA JÁ!</button>
+                                        <button >Saiba Mais</button>
                                     </Link>
                                 </div>
                             </div>

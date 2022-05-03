@@ -77,7 +77,7 @@ const HomeContainerTres: React.FC = () => {
                                     <Grafico />
                                 </div>
                                 <div className="text">
-                                    <p>Aumento a taxa de ocupação</p>
+                                    <p>Aumento da taxa de ocupação</p>
                                 </div>
                             </div>
                             <div className="cardBeneficio clinica">
@@ -86,7 +86,7 @@ const HomeContainerTres: React.FC = () => {
                                 </div>
 
                                 <div className="text">
-                                    <p>Otimização dos horário de funcionamento</p>
+                                    <p>Otimização dos horários de funcionamento</p>
                                 </div>
                             </div>
                             <div className="cardBeneficio clinica">

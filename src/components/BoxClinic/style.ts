@@ -35,6 +35,9 @@ export const Container = styled.div`
                 text-align:center;
                 margin:5px;
             }
+            h6{
+                cursor:pointer;
+            }
         }
         .containerPrice{
             display:flex;
@@ -50,9 +53,14 @@ export const Container = styled.div`
             text-decoration:none;
             font-size:90%;
             cursor:pointer;
+            color:${props => props.theme.colors.azulEscuro}
 
             :hover{
                 font-weight:700;
+            }
+
+            :visited{
+                color:${props => props.theme.colors.azulEscuro}
             }
         }
     }
